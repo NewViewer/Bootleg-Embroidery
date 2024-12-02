@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Ocupa toda la ventana */
+}
+
+.contenedor-imagenes {
+    position: fixed;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    right: 10px; /* Ajusta la distancia desde el lado derecho */
+    display: flex;
+    flex-direction: column; /* Coloca las imágenes en columna (una encima de otra) */
+    gap: 0; /* Espacio entre las imágenes */
+    z-index: 1000; /* Asegura que las imágenes estén por encima de otros elementos */
+}
+
+.imagen-fija {
+    width: 100px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 8px; /* Opcional: redondea las esquinas */
+}
+
+header {
+    position: fixed;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px; /* Ajusta la altura según lo necesites */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    z-index: 1000;
+    bottom: 100px;
+}
+
+.logo-container {
+    position: absolute;
+    top: 1px; /* Ajusta la posición según lo necesites */
+    left: 10px; /* Ajusta la posición según lo necesites */
+}
+
+.logo {
+    max-width:100px; /* Ajusta el tamaño del logo */
+    height: 100px;
+    border-radius: 50%; /* Opcional, para un borde circular */
+    border: 3px solid #333; /* Ajusta el color y grosor del borde */
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Agrega sombra */
+}
+
+.centrado {
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    padding: 20px 0; 
+    width: 100%; /* Asegura que el footer ocupe el ancho completo */
+    text-align: center; 
+    color: white;
+    margin: 0 auto; /* Centra el footer horizontalmente */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos en la parte horizontal */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva línea si es necesario */
+    padding: 20px;
+}
+
+.contactanos {
+    flex: 1; /* Hace que las secciones dentro del contenedor tengan un ancho proporcional */
+    max-width: 400px; /* Limita el ancho de las secciones para que no se estiren demasiado */
+    margin: 10px;
+}
+
+.contactanos h3 {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contactanos p, .contactanos ul li, .contactanos a {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    display: flex;
+    max-width: 1150px;
+    background-color: #fff;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin:auto; /* Asegura que el contenedor esté centrado */
+}
+
+/* Columna de la imagen */
+.imagen {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    display: flex;
+    justify-content:flex-start; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagen img {
+    transform-origin: center;
+    object-fit: cover;
+    max-width: 580px; /* Ajusta la imagen al ancho del contenedor */
+    height: 450px;
+    max-height: 800; /* Ajusta la imagen al alto del contenedor */
+    object-fit: contain; /* Mantiene la proporción sin recortar */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    transition: transform 0.3s ease;
+}
+
+/* Columna de la descripción */
+.descripcion {
+    flex: 1; /* Ocupa la otra mitad del espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Centra el texto verticalmente */
+    align-items: center; /* Centra el texto horizontalmente */
+    padding: 20px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.descripcion h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.descripcion p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Estilos base para escritorio (por defecto) */
+
+/* Media queries para tablets */
+@media (max-width: 1024px) {
+    header {
+        height: 120px; /* Reduce la altura del header en pantallas más pequeñas */
+        padding: 0.5rem;
+    }
+
+    .logo {
+        max-width: 100px;
+        height: 100px;
+    }
+
+    .design {
+        height: 300px;
+        width: 250px;
+        margin: 0.5rem;
+    }
+
+    .contactanos {
+        max-width: 300px; /* Reduce el ancho máximo de las secciones */
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+/* Media queries para móviles */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: center;  /* Asegura que los elementos estén centrados */
+        padding: 15px 10px; /* Reduce el padding */
+    }
+
+    .logo {
+        max-width: 70px;  /* Tamaño reducido para el logo */
+        height: 70px;
+        margin-bottom: 10px;  /* Espacio debajo del logo */
+    }
+
+    .centrado h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del título */
+        text-align: center;
+        margin: 10px 0;  /* Espacio adicional alrededor del título */
+    }
+
+    .contenedor-imagenes {
+        position: fixed; /* Asegura que los íconos sociales se mantengan fijos */
+        right: 5px;
+        bottom: 5px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .design {
+        width: 100%;  /* Asegura que los productos se ajusten al ancho de la pantalla */
+        height: auto; /* Ajusta la altura de los productos para mantener la proporción */
+        margin: 10px 0;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center; /* Centra los elementos del footer */
+    }
+
+    .contactanos {
+        width: 100%;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .contactanos h3 {
+        font-size: 20px;
+    }
+
+    .contactanos p, .contactanos ul li, .contactanos a {
+        font-size: 14px;
+    }
+}
